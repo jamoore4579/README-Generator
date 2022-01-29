@@ -7,12 +7,17 @@ const generatePage = require('./utils/generateMarkdown')
 
 // array of questions for user input
 const questions = () => {
+    console.log(`
+        ===================================================
+           Create a Professional README ( * = Required )
+        ===================================================
+        `)
     // inquirer package will prompt the questions
     return inquirer.prompt([
         {
             type: 'input',
             name: 'github',
-            message: 'What is your GitHub username? (Required)',
+            message: 'What is your GitHub username? (*)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -25,7 +30,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What is your project name? (Required)',
+            message: 'What is your project name? (*)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -38,7 +43,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Please write a short description of your project. (Required)',
+            message: 'Please write a short description of your project. (*)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -58,7 +63,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'install',
-            message: 'What are the steps required to install your project? (Required)',
+            message: 'What are the steps required to install your project? (*)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -71,7 +76,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'How do you use this app? (Required)',
+            message: 'How do you use this app? (*)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -99,8 +104,12 @@ const questions = () => {
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
+// function to initialize app
+questions ()
 
-// Function call to initialize app
-init();
+// retrieving the input answers
+.then(answers => {
+    return generatePage(answers);
+})
+
+
