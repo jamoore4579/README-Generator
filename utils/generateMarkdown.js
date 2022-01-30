@@ -47,11 +47,6 @@ const generateMarkdown = data => {
 // If there is no license, return an empty string
 //function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
-//function generateMarkdown(data) {
-  //return `# ${data.title}
 
-//`;
-//}
 // used to import data from index
 module.exports = generateMarkdown;

@@ -114,7 +114,6 @@ const questions = () => {
 };
 
 
-//function writeToFile(fileName, data) {}
 // function to write README file using fs
 const writeFile = data => {
     fs.writeFile('README.md', data, err => {
