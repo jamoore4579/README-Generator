@@ -74,7 +74,7 @@ const questions = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log('Please enter a usage description!');
+                    console.log('Please enter steps needed to install your project.');
                     return false;
                 }
             }
@@ -123,6 +123,10 @@ questions ()
 // retrieving the input answers
 .then(answers => {
     return generatePage(answers);
+})
+
+.then(data => {
+    return writeFile(data);
 })
 
 
