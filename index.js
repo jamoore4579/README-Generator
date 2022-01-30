@@ -29,6 +29,19 @@ const questions = () => {
         },
         {
             type: 'input',
+            name: 'email',
+            message: 'What is your email address? (*)',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+                }
+            }
+        },
+        {
+            type: 'input',
             name: 'title',
             message: 'What is your project name? (*)',
             validate: nameInput => {
@@ -52,13 +65,6 @@ const questions = () => {
                     return false
                 }
             }
-        },
-        {
-            type: 'list',
-            name: 'license',
-            message: 'What kind of license should your project have?',
-            choices: ['MIT', 'GNU'],
-            default: ['MIT']
         },
         {
             type: 'input',
@@ -87,16 +93,23 @@ const questions = () => {
             }
         },
         {
-           type: 'input',
-           name: 'test',
-           message: 'What command should be used to run tests?',
-           default: 'npm test' 
+            type: 'list',
+            name: 'license',
+            message: 'What kind of license should your project have?',
+            choices: ['MIT', 'GNU'],
+            default: ['MIT']
         },
         {
             type: 'input',
             name: 'contributors',
             message: 'What does the user need to know about contributing to the repo?'
-        }
+        },
+        {
+           type: 'input',
+           name: 'test',
+           message: 'What command should be used to run tests?',
+           default: 'npm test' 
+        },
     ]);
 };
 
