@@ -18,6 +18,7 @@
 
   ## Usage
   Use inquirer from your command line to answer questions about your project.
+  <img src="./utils/Node_Inputs.JPG">
 
   ## License
   This project is license under MIT
