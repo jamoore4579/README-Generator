@@ -3,7 +3,7 @@
   
 
   ## Description
-  This application was coded to helpthe user create a Professional README depending on a group of inputs that are answered by the user in the command line using Node.js
+  This application was coded to help the user create a Professional README depending on a group of inputs that are answered by the user in the command line using Node.js
 
   ## Table of Contents
   * [Installation](#installation)
@@ -18,7 +18,8 @@
 
   ## Usage
   Use inquirer from your command line to answer questions about your project.
-  <img src="./utils/Node_Inputs.JPG">
+  <img src="./utils/Node_Inputs.JPG"><br>
+  <img src="./utils/README Generator.webm">
 
   ## License
   This project is license under MIT
