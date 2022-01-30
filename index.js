@@ -114,8 +114,21 @@ const questions = () => {
 };
 
 
-// TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
+// function to write README file using fs
+const writeFile = data => {
+    fs.writeFile('README.md', data, err => {
+        // if an error occurs
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            //when the README has been created
+            console.log("Your README has been created!")
+        }
+    })
+};
+
 
 // function to initialize app
 questions ()
@@ -127,6 +140,10 @@ questions ()
 
 .then(data => {
     return writeFile(data);
+})
+// catching errs
+.catch(err => {
+    console.log(err)
 })
 
 
