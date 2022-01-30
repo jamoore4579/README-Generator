@@ -19,7 +19,7 @@
   ## Usage
   Use inquirer from your command line to answer questions about your project.
   <img src="./utils/Node_Inputs.JPG"><br>
-  <img src="./utils/README_Generator.mp4">
+  View the link: [Screencastify] https://drive.google.com/file/d/18WScvzxWDkyRG-4Kq560RzYL5QPTXjp9/view?usp=sharing
 
   ## License
   This project is license under MIT
